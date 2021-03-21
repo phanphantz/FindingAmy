@@ -4,43 +4,18 @@
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>แชทซ่อนเงื่อน</title>
-    <link rel="shortcut icon" href="TemplateData/app_logo.ico">
+    <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
     <script src="TemplateData/UnityProgress.js"></script>
     <script src="Build/UnityLoader.js"></script>
     <script>
       var unityInstance = UnityLoader.instantiate("unityContainer", "Build/FindingAmyWebGL.json", {onProgress: UnityProgress});
       unityInstance.SetFullscreen(1)
-      function startup() {
-		window.onresize = function() {
-			resizeGame();
-		};
-		resizeGame();
-	}
-	function resizeGame() {
-	
-		//	Ensure that the game fits within the width of its containing
-		//	div, and is shallower than the height of the containing window.
-	
-		var containerDiv = document.getElementById('webgl-content');
-		var element = document.getElementById('unityContainer');      // the element
-		
-		var widthLimitedScale = Math.floor( containerDiv.offsetWidth ) / 768.0;
-		var heightLimitedScale = (Math.floor( window.innerHeight ) - 50) / 432.0;
-		
-		var scale = widthLimitedScale;
-		if (heightLimitedScale < scale) scale = heightLimitedScale;
-		
-		element.style.width = Math.floor(432 * scale) + 'px';
-		element.style.height = Math.floor(768 * scale) + 'px';
-		element.style.margin = "auto";
-
-	}
     </script>
   </head>
   <body>
     <div class="webgl-content">
-      <div id="unityContainer" ></div>
+      <div id="unityContainer" style="width: 432px; height: 760px"></div>
       <div class="footer">
        
       </div>
