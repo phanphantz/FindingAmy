@@ -11,11 +11,36 @@
     <script>
       var unityInstance = UnityLoader.instantiate("unityContainer", "Build/FindingAmyWebGL.json", {onProgress: UnityProgress});
       unityInstance.SetFullscreen(1)
+      function startup() {
+		window.onresize = function() {
+			resizeGame();
+		};
+		resizeGame();
+	}
+	function resizeGame() {
+	
+		//	Ensure that the game fits within the width of its containing
+		//	div, and is shallower than the height of the containing window.
+	
+		var containerDiv = document.getElementById('webgl-content');
+		var element = document.getElementById('unityContainer');      // the element
+		
+		var widthLimitedScale = Math.floor( containerDiv.offsetWidth ) / 768.0;
+		var heightLimitedScale = (Math.floor( window.innerHeight ) - 50) / 432.0;
+		
+		var scale = widthLimitedScale;
+		if (heightLimitedScale < scale) scale = heightLimitedScale;
+		
+		element.style.width = Math.floor(432 * scale) + 'px';
+		element.style.height = Math.floor(768 * scale) + 'px';
+		element.style.margin = "auto";
+
+	}
     </script>
   </head>
   <body>
     <div class="webgl-content">
-      <div id="unityContainer" style="height: 100%; padding-top: 177.77%;"></div>
+      <div id="unityContainer" ></div>
       <div class="footer">
        
       </div>
