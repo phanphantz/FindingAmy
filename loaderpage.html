@@ -42,7 +42,7 @@
         bottom: 60px;
         left: 50%;
         width: 200px;
-        margin-left: -100px; 
+        margin-left: -100px;
       }
       #PC {
         object-fit: cover;
@@ -50,19 +50,24 @@
         bottom: 60px;
         left: 50%;
         width: 200px;
-        margin-left: -200px; 
+        margin-left: -200px;
       }
     </style>
   </head>
 
-  <body>
-    <div class="mainContainer">
-      <a href="loaderpage.html">
-      <video autoplay muted loop id="myVideo">
-        <source src="video.mp4" type="video/mp4" />
-      </video>
-    </a>
-     
-    </div>
-  </body>
+  <body></body>
+  <script>
+      if (detectMob())
+      {
+        // window.location.href ="gamepage.html";
+      }
+      else
+      {
+        window.location.href ="gamepage.html";
+      }
+
+    function detectMob() {
+      return window.innerWidth <= 800 && window.innerHeight <= 600;
+    }
+  </script>
 </html>
