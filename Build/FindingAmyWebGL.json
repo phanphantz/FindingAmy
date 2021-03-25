@@ -1,7 +1,7 @@
 {
 "companyName": "Phun Peeticharoenthum",
 "productName": "FindingAmy",
-"productVersion": "1.0",
+"productVersion": "2.0",
 "dataUrl": "FindingAmyWebGL.data.unityweb",
 "wasmCodeUrl": "FindingAmyWebGL.wasm.code.unityweb",
 "wasmFrameworkUrl": "FindingAmyWebGL.wasm.framework.unityweb",
