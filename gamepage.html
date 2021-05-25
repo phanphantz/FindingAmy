@@ -98,9 +98,9 @@
     </div>
   </body>
 
-  <script src="Build/WebGL.loader"></script>
+  <script src="Build/WebGL.framework.js"></script>
   <script>
-  var gameInstance = UnityLoader.instantiate("gameContainer", "Build/WebGL.wasm", {onProgress: UnityProgress});
+  var gameInstance = UnityLoader.instantiate("gameContainer", "Build/WebGL.loader", {onProgress: UnityProgress});
   function UnityProgress(gameInstance, progress) {
     if (!gameInstance.Module) {
       return;
